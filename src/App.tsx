@@ -186,6 +186,41 @@ export default function App() {
         </div>
       </section>
 
+      {/* 6.5. BANNER DE SORTEIO */}
+      <section className="py-12 px-6 bg-white overflow-hidden">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            {...fadeIn}
+            className="relative bg-gradient-to-br from-pink-50 to-beige-50 rounded-[2.5rem] p-8 md:p-16 border-4 border-white shadow-2xl flex flex-col items-center text-center gap-6 overflow-hidden"
+            style={{ backgroundColor: '#fff5f7' }}
+          >
+            {/* Decoração de fundo */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-pink-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-light/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 bg-brand-strong text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-8 shadow-lg">
+                <Star size={16} className="fill-current" />
+                Exclusivo por tempo limitado
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold text-brand-dark mb-6 leading-tight">
+                🎁 SORTEIO IMPERDÍVEL
+              </h2>
+              <p className="text-2xl md:text-3xl text-gray-700 font-medium mb-10 max-w-2xl mx-auto">
+                Comprando hoje você concorre a um <span className="text-brand-strong font-bold underline decoration-brand-light">Kit Maternidade completo</span>
+              </p>
+              
+              <div className="flex justify-center gap-4">
+                <div className="flex items-center gap-2 text-base text-gray-600 bg-white/70 px-6 py-3 rounded-2xl backdrop-blur-sm border border-pink-100">
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
+                  Válido apenas para compras realizadas hoje
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* 7. DOIS CARDS DE OFERTA */}
       <section className="py-12 px-6">
         <div className="max-w-5xl mx-auto text-center">
