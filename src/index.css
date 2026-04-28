@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", serif;
+
+  --color-brand-light: #FCE4EC;
+  --color-brand-medium: #F48FB1;
+  --color-brand-strong: #E91E8C;
+  --color-brand-dark: #880E4F;
+  --color-surface: #FFFFFF;
+  --color-text-main: #333333;
+  --color-text-muted: #666666;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-text-main bg-white selection:bg-brand-light;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif text-brand-dark;
+  }
+}
+
+.shadow-sleek {
+  box-shadow: 0 4px 10px rgba(233, 30, 140, 0.15);
+}
+
+.shadow-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pill {
+  @apply px-3 py-1 bg-brand-light text-brand-dark rounded-full text-[10px] font-bold uppercase tracking-wider mb-2 inline-block;
+}
