@@ -9,6 +9,12 @@ import { Check, X, Shield, Star, Lock } from "lucide-react";
 const LINK_1990 = "https://pay.wiapy.com/69f01c346c8e0a09823afda3";
 const LINK_2700 = "https://pay.wiapy.com/69f01dcd6c8e0a09823b67ce";
 
+const trackInitiateCheckout = () => {
+  if (typeof window !== 'undefined' && (window as any).fbq) {
+    (window as any).fbq('track', 'InitiateCheckout');
+  }
+};
+
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -42,6 +48,7 @@ export default function App() {
               href={LINK_1990}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackInitiateCheckout}
               className="inline-block bg-brand-strong text-white font-bold py-5 px-10 rounded-lg text-lg md:text-xl transform transition hover:scale-105 active:scale-95 shadow-sleek"
             >
               QUERO ALIVIAR MINHAS DORES — R$19,90
@@ -207,6 +214,7 @@ export default function App() {
                 href={LINK_1990}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackInitiateCheckout}
                 className="w-full bg-brand-strong text-white font-bold py-3 rounded-lg hover:bg-brand-dark transition-colors text-sm shadow-sleek"
               >
                 QUERO O BÁSICO
@@ -246,6 +254,7 @@ export default function App() {
                 href={LINK_2700}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={trackInitiateCheckout}
                 className="w-full bg-brand-strong text-white font-bold py-3 rounded-lg hover:bg-brand-dark transition-colors shadow-sleek text-sm"
               >
                 EDIÇÃO COMPLETA
@@ -285,6 +294,7 @@ export default function App() {
             href={LINK_1990}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackInitiateCheckout}
             {...fadeIn}
             className="inline-block bg-brand-strong text-white font-bold py-5 px-12 rounded-full text-xl md:text-2xl transform transition hover:scale-105 active:scale-95 shadow-2xl mb-6"
           >
